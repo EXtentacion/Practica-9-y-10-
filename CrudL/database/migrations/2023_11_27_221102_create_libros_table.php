@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('tb_recuerdos', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('libros', function (Blueprint $table) {
+            $table->id();
             $table->string('titulo');
-            $table->string('recuerdo');
-            $table->date('fecha');
+            $table->string('autor');
+            $table->integer('paginas');
+            $table->integer('anio');
             $table->timestamps();
         });
     }
@@ -25,8 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('tb_recuerdos');
+        Schema::dropIfExists('libros');
     }
 };
-
-

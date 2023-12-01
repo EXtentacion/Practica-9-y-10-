@@ -14,8 +14,13 @@
             <h5 class="card-title"> {{ $recuerdo->titulo }} </h5>
             <p class="card-text"> {{ $recuerdo->fecha }}</p>
             <p class="card-text"> {{ $recuerdo->descripcion }}</p>
-            <a href="#" class="btn btn-warning">Editar</a>
-            <a href="#" class="btn btn-danger">Borrar</a>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editar">
+            Editar
+            </button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#eliminar">
+            Eliminar
+            </button>
 
             </div>
         </div>
